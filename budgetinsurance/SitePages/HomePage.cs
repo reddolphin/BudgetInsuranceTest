@@ -5,11 +5,11 @@ namespace budgetinsurance.SitePages
 {
     public class HomePage
     {
-        static string Url = "http://pluralsight.com";
-        private static string PageTitle = "Pluralsight - Hardcore Developer Training";
+        static string Url = "http://www.budgetinsurance.com/";
+        private static string PageTitle = "Budget has provided great value, quality insurance for over 1 million cars in the UK since 1992. Budget has a UK based service team and 24/7 claims line.";
 
-        [FindsBy(How = How.LinkText, Using = "Authors")]
-        private IWebElement authorLink;
+        [FindsBy(How = How.CssSelector, Using = "#productCar getquote .focusable")]
+        private IWebElement carInsuranceGetQuoteLink;
 
         public void Goto()
         {
@@ -21,19 +21,9 @@ namespace budgetinsurance.SitePages
             return Browser.Title == PageTitle;
         }
 
-        public void SelectAuthor(string authorName)
+        public void CarInsuranceGetAQuoteClick()
         {
-            authorLink.Click();
-            var author = Browser.Driver.FindElement(By.LinkText(authorName));
-            author.Click();
-        }
-
-        public bool IsAtAuthorPage(string authorName)
-        {
-            var authorPage = new AuthorPage();
-            PageFactory.InitElements(Browser.Driver, authorPage);
-            return authorPage.AuthorName == authorName;
-
+            carInsuranceGetQuoteLink.Click();
         }
     }
 }

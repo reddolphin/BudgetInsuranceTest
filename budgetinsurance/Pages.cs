@@ -19,5 +19,15 @@ namespace budgetinsurance
                 return homePage;
             }
         }
+
+        public static CarInsuranceQuote CarInsuranceQuote
+        {
+            get
+            {
+                var carInsuranceQuote = new CarInsuranceQuote();
+                PageFactory.InitElements(Browser.Driver, carInsuranceQuote);
+                return carInsuranceQuote;
+            }
+        }
     }
 }

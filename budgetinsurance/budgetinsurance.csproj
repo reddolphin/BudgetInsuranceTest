@@ -49,10 +49,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Browser.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="Pages.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SitePages\AuthorPage.cs" />
+    <Compile Include="SitePages\CarInsuranceQuote.cs" />
     <Compile Include="SitePages\HomePage.cs" />
   </ItemGroup>
   <ItemGroup>
